@@ -14,10 +14,8 @@ public class WebDriverFactory {
                 chromeDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                 return chromeDriver;
             case "yandex":
-                System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
-                ChromeOptions options = new ChromeOptions();
-                options.setBinary("C:/Users/AlinaZaytseva/AppData/Local/Yandex/YandexBrowser/Application/browser.exe");
-                ChromeDriver yandexDriver = new ChromeDriver(options);
+                System.setProperty("webdriver.chrome.driver", "src/main/resources/yandexdriver.exe");
+                ChromeDriver yandexDriver = new ChromeDriver();
                 yandexDriver.manage().window().maximize();
                 yandexDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                 return yandexDriver;
